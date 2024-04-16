@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calci</title>
+</head>
+<style>
+#main{
+    width: 300px;
+    height: 280px;
+    background-color: black;
+    margin-top: 10%;
+    cursor: pointer;
+}
+input{
+    width:20%;
+    height:40px;
+    font-size: 20px;
+    margin: 6px;
+    text-align: center;
+}
+#window{
+    width: 93%;
+    background-color:silver;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+</style>
+<body><center>
+    <div id="main">
+        <form name="Calci">
+        <input type="Output" name="Op" id="window" placeholder="0"><br>
+        <input type="button" value="1" onclick="Calci.Op.value+=1">
+        <input type="button" value="2" onclick="Calci.Op.value+=2">
+        <input type="button" value="3" onclick="Calci.Op.value+=3">
+        <input type="button" value="+" onclick="add()">
+        <br>
+        <input type="button" value="4" onclick="Calci.Op.value+=4">
+        <input type="button" value="5" onclick="Calci.Op.value+=5">
+        <input type="button" value="6" onclick="Calci.Op.value+=6">
+        <input type="button" value="-" onclick="sub()">
+        <br>
+        <input type="button" value="7" onclick="Calci.Op.value+=7">
+        <input type="button" value="8" onclick="Calci.Op.value+=8">
+        <input type="button" value="9" onclick="Calci.Op.value+=9">
+        <input type="button" value="X" onclick="multi()">
+        <br>
+        <input type="button" value="C" onclick="Calci.Op.value=''">
+        <input type="button" value="0" onclick="Calci.Op.value+=0">
+        <input type="button" value="=" onclick="Calci.Op.value=eval(Calci.Op.value)">
+        <input type="button" value="/" onclick="divide()">
+        <br>
+
+        </form>
+    </div>
+    <script>
+       function add(){
+        var act=0 , b=0;
+        act = Calci.Op.value;
+        b=act.charAt(act.length-1);
+        if (b=='+' ||  b=='-' || b=='/' ||  b=='*'){
+            Calci.Op.value=act.substring(0,act.length-1);
+            Calci.Op.value+='+';
+        }
+        else{
+            Calci.Op.value+='+';
+        }
+       }
+       function sub(){
+        var act=0 , b=0;
+        act = Calci.Op.value;
+        b=act.charAt(act.length-1);
+        if (b=='+' ||  b=='-' || b=='/' ||  b=='*'){
+            Calci.Op.value=act.substring(0,act.length-1);
+            Calci.Op.value+='-';
+        }
+        else{
+            Calci.Op.value+='-';
+        }
+       }
+       function multi(){
+        var act=0 , b=0;
+        act = Calci.Op.value;
+        b=act.charAt(act.length-1);
+        if (b=='+' ||  b=='-' || b=='/' ||  b=='*'){
+            Calci.Op.value=act.substring(0,act.length-1);
+            Calci.Op.value+='*';
+        }
+        else{
+            Calci.Op.value+='*';
+        }
+       }
+       function divide(){
+        var act=0 , b=0;
+        act = Calci.Op.value;
+        b=act.charAt(act.length-1);
+        if (b=='+' ||  b=='-' || b=='/' ||  b=='*'){
+            Calci.Op.value=act.substring(0,act.length-1);
+            Calci.Op.value+='/';
+        }
+        else{
+            Calci.Op.value+='/';
+        }
+       }
+
+    </script>
+    
+</center>
+</body>
+</html>
