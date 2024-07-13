@@ -1,0 +1,66 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, white , darkgrey);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+.card{
+    background: linear-gradient(to top,darkgrey ,black);
+    border-radius:10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+}
+.heading , .counter-machine{
+    color: white;
+    margin: 0;
+}
+.counter{
+    background-color: #333;
+    border-radius: 50%;
+    padding: 20%;
+    margin:20px auto;
+    width: 100px;
+    display: flex;
+    height:100px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border: 2px solid transparent;
+    transition: border-color 0.5s;
+}
+.btn-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.btn-counter{
+    background-color:skyblue ;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+.btn-counter:hover{
+    background-color: darkblue;
+}
+.positive{
+    border-color: green;
+}
+.negative{
+    border-color: red;
+}
